@@ -74,25 +74,25 @@ console.log(varString.split(" ")[1]);
 
 const nome = prompt("Por gentileza, informe o seu nome completo: ");
 
-let varFirstA = "";
-let varLastA = "";
+// let varFirstA = "";
+// let varLastA = "";
 
-for (let i = 0; i < nome.length; i++) {
-  if (nome[i] === "a") {
-    varFirstA = `${i + 1}º`;
-    break;
-  } else {
-    varFirstA = "Não existe letra A no nome!";
-  }
-}
+// for (let i = 0; i < nome.length; i++) {
+//   if (nome[i] === "a" || nome[i] === "A") {
+//     varFirstA = `${i + 1}º`;
+//     break;
+//   } else {
+//     varFirstA = "Não existe letra A no nome!";
+//   }
+// }
 
-for (let i = 0; i < nome.length; i++) {
-  if (nome[i] === "a") {
-    varLastA = `${i + 1}º`;
-  } else {
-    varLastA = "Não existe letra A no nome!";
-  }
-}
+// for (let i = 0; i < nome.length; i++) {
+//   if (nome[i] === "a" || nome[i] === "A") {
+//     varLastA = `${i + 1}º`;
+//   } else {
+//     varLastA = "Não existe letra A no nome!";
+//   }
+// }
 
 document.body.innerHTML += `O seu nome é: <strong>${nome}</strong> <br />`;
 
@@ -102,9 +102,13 @@ document.body.innerHTML += `O seu nome tem essa qtde. de letras: <strong>${
 
 document.body.innerHTML += `A segunda letra do seu nome é: <strong>${nome[1]}</strong> <br />`;
 
-document.body.innerHTML += `Qual o primeiro índice da letra A no seu nome? <strong>${varFirstA}</strong> <br />`;
+document.body.innerHTML += `Qual o primeiro índice da letra A no seu nome? <strong>${nome.indexOf(
+  "a"
+)}</strong> <br />`;
 
-document.body.innerHTML += `Qual o último índice da letra A no seu nome? <strong>${varLastA}</strong> <br />`;
+document.body.innerHTML += `Qual o último índice da letra A no seu nome? <strong>${nome.lastIndexOf(
+  "a"
+)}</strong> <br />`;
 
 document.body.innerHTML += `As últimas três letras do seu nome são: <strong>${nome.slice(
   -3
